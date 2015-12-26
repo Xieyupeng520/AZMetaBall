@@ -13,6 +13,8 @@
 		475143161C20517F00E9AB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475143141C20517F00E9AB26 /* Main.storyboard */; };
 		475143181C20517F00E9AB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475143171C20517F00E9AB26 /* Assets.xcassets */; };
 		4751431B1C20517F00E9AB26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475143191C20517F00E9AB26 /* LaunchScreen.storyboard */; };
+		475143251C205BA400E9AB26 /* AZMetaBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143241C205BA400E9AB26 /* AZMetaBall.m */; };
+		475143281C2505C100E9AB26 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143271C2505C100E9AB26 /* Circle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		475143171C20517F00E9AB26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4751431A1C20517F00E9AB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4751431C1C20517F00E9AB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		475143231C205BA400E9AB26 /* AZMetaBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZMetaBall.h; path = MetaBall/AZMetaBall.h; sourceTree = "<group>"; };
+		475143241C205BA400E9AB26 /* AZMetaBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBall.m; path = MetaBall/AZMetaBall.m; sourceTree = "<group>"; };
+		475143261C2505C100E9AB26 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = MetaBall/Circle.h; sourceTree = "<group>"; };
+		475143271C2505C100E9AB26 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Circle.m; path = MetaBall/Circle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		4751430A1C20517F00E9AB26 /* AZMetaBall */ = {
 			isa = PBXGroup;
 			children = (
+				475143221C205B6D00E9AB26 /* MetaBall */,
 				4751430E1C20517F00E9AB26 /* AppDelegate.h */,
 				4751430F1C20517F00E9AB26 /* AppDelegate.m */,
 				475143111C20517F00E9AB26 /* ViewController.h */,
@@ -77,6 +84,17 @@
 				4751430C1C20517F00E9AB26 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		475143221C205B6D00E9AB26 /* MetaBall */ = {
+			isa = PBXGroup;
+			children = (
+				475143231C205BA400E9AB26 /* AZMetaBall.h */,
+				475143241C205BA400E9AB26 /* AZMetaBall.m */,
+				475143261C2505C100E9AB26 /* Circle.h */,
+				475143271C2505C100E9AB26 /* Circle.m */,
+			);
+			name = MetaBall;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475143251C205BA400E9AB26 /* AZMetaBall.m in Sources */,
 				475143131C20517F00E9AB26 /* ViewController.m in Sources */,
+				475143281C2505C100E9AB26 /* Circle.m in Sources */,
 				475143101C20517F00E9AB26 /* AppDelegate.m in Sources */,
 				4751430D1C20517F00E9AB26 /* main.m in Sources */,
 			);
