@@ -1,0 +1,10 @@
+PODS:
+  - MJRefresh (3.0.8)
+
+DEPENDENCIES:
+  - MJRefresh
+
+SPEC CHECKSUMS:
+  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+
+COCOAPODS: 0.39.0
