@@ -7,20 +7,13 @@
 //
 
 #import "AZMetaBall.h"
-#import "Circle.h"
-#import "Math.h"
 
-#define RADIUS 50.0
+#import "Math.h"
 
 @interface AZMetaBall() {
     UIBezierPath *_path;
     
     CGPoint _touchPoint;
-    
-    Circle *_centerCircle;
-    Circle *_touchCircle;
-    
-    float _touchCircleRadius;
 }
 
 @end
@@ -55,13 +48,11 @@
     _touchCircle = [Circle initWithcenterPoint:self.center radius:RADIUS color:[UIColor redColor]];
     _centerCircle = [Circle initWithcenterPoint:self.center radius:RADIUS color:[UIColor blueColor]];
     
-    _touchCircleRadius = 40;
+    _touchPoint = self.center;
 }
 
 - (void)drawRect:(CGRect)rect {
     _path = [[UIBezierPath alloc] init];
-    
-//    [self caculateCircle1:_centerCircle Circle2:_touchCircle];
     
     [self drawCenterCircle];
     
@@ -70,24 +61,17 @@
     [self drawBezierCurveWithCircle1:_centerCircle Circle2:_touchCircle];
 }
 
--(void)caculateCircle1:(Circle *)circle1 Circle2:(Circle *)circle2 {
-    NSLog(@"circle1:(%@) circle2(%@)", circle1, circle2);
-    
-    float circle1_x = circle1.centerPoint.x;
-    float circle1_y = circle1.centerPoint.y;
-    float circle2_x = circle2.centerPoint.x;
-    float circle2_y = circle2.centerPoint.y;
-
-    //连心线的长度
-    float d = sqrt(powf(circle1_x - circle2_x, 2) + powf(circle1_y - circle2_y, 2));
-    NSLog(@"连心线的长度：%f", d);
-    
-    float n = d / (circle1.radius + circle2.radius);
-    
-    _touchCircleRadius = RADIUS / n + 10;
-    
-    NSLog(@"touch radius : %f", _touchCircleRadius);
+#pragma mark  - public方法 -
+#pragma 改变半径
+-(void)changeCenterCircleRadiusTo:(float)radius {
+    _centerCircle.radius = radius;
+    [self setNeedsDisplay];
 }
+-(void)changeTouchCircleRadiusTo:(float)radius {
+    _touchCircle.radius = radius;
+    [self setNeedsDisplay];
+}
+#pragma mark  - private方法 -
 
 #pragma mark draw curve
 - (void)drawBezierCurveWithCircle1:(Circle *)circle1 Circle2:(Circle *)circle2 {
@@ -133,8 +117,11 @@
     CGPoint p3 = CGPointMake(p3_x, p3_y);
     CGPoint p4 = CGPointMake(p4_x, p4_y);
     
-//    [self drawLineStartAt:p1 EndAt:p4];
-//    [self drawLineStartAt:p2 EndAt:p4];
+    //画切线
+//    [_path moveToPoint:p1];
+//    [self drawLineStartAt:p1 EndAt:p2];
+//    [_path moveToPoint:p3];
+//    [self drawLineStartAt:p3 EndAt:p4];
     
     //连心线中点坐标(用来作为控制点）
     CGPoint d_center = CGPointMake((circle1_x + circle2_x) / 2, (circle1_y + circle2_y) / 2);
@@ -147,12 +134,18 @@
     [self drawBezierCurveStartAt:p4 EndAt:p3 controlPoint:p1_center_p4];
     [self drawLineStartAt:p3 EndAt:p1];
     
+    [_path moveToPoint:p1];
     [_path closePath];
-    [_path fill];
+    
+    if (IS_FILL) {
+        [_path fill];
+    }
+    if (IS_STROKE) {
+        [_path stroke];
+    }
 }
 
 - (void)drawLineStartAt:(CGPoint)startPoint EndAt:(CGPoint)endPoint {
-//    [_path moveToPoint:startPoint];
     [_path addLineToPoint:endPoint];
     [[UIColor blackColor] setStroke];
     [_path stroke];
@@ -164,27 +157,28 @@
 }
 
 #pragma mark draw circle
-- (void)drawCircle:(UIBezierPath *)path circle:(Circle *)circle {
-    [_path addArcWithCenter:circle.centerPoint radius:circle.radius startAngle:0 endAngle:360 clockwise:true];
-    
-//    [circle.color setFill];
-    
-    [[UIColor blackColor] setFill];
-    [_path fill];
-    
-    [_path removeAllPoints];
-}
-
 - (void) drawCenterCircle {
-    _centerCircle.radius = _touchCircleRadius;
-    
     [self drawCircle:_path circle:_centerCircle];
 }
 
 - (void) drawTouchCircle:(CGPoint)center {
     _touchCircle.centerPoint = center;
-
+    
     [self drawCircle:_path circle:_touchCircle];
+}
+
+- (void)drawCircle:(UIBezierPath *)path circle:(Circle *)circle {
+    [_path addArcWithCenter:circle.centerPoint radius:circle.radius startAngle:0 endAngle:360 clockwise:true];
+    
+    if (IS_FILL) {
+        [_path fill];
+    }
+    if (IS_STROKE) {
+        [_path stroke];
+    }
+    
+    
+    [_path removeAllPoints];
 }
 
 #pragma mark touch event

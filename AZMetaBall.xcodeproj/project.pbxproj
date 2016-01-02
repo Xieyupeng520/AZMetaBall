@@ -7,31 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47253B151C36461000FF911A /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B141C36461000FF911A /* MainTableViewController.m */; };
+		47253B181C3653EB00FF911A /* AZDIYHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B171C3653EB00FF911A /* AZDIYHeader.m */; };
+		47253B201C376FB400FF911A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47253B1F1C376FB400FF911A /* Images.xcassets */; };
+		47253B231C37797200FF911A /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47253B221C37797200FF911A /* MainTableViewCell.xib */; };
+		47253B261C377CF400FF911A /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B251C377CF400FF911A /* MainTableViewCell.m */; };
+		47253B291C378E8A00FF911A /* CellTitle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47253B281C378E8A00FF911A /* CellTitle.plist */; };
+		47253B2B1C37914700FF911A /* CellDetailText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47253B2A1C37914700FF911A /* CellDetailText.plist */; };
+		47253B2E1C379B0500FF911A /* AZMetaBallCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */; };
+		47253B311C379B7A00FF911A /* AZMetaBallItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B301C379B7A00FF911A /* AZMetaBallItem.m */; };
 		4751430D1C20517F00E9AB26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751430C1C20517F00E9AB26 /* main.m */; };
 		475143101C20517F00E9AB26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751430F1C20517F00E9AB26 /* AppDelegate.m */; };
 		475143131C20517F00E9AB26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143121C20517F00E9AB26 /* ViewController.m */; };
 		475143161C20517F00E9AB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475143141C20517F00E9AB26 /* Main.storyboard */; };
-		475143181C20517F00E9AB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475143171C20517F00E9AB26 /* Assets.xcassets */; };
 		4751431B1C20517F00E9AB26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475143191C20517F00E9AB26 /* LaunchScreen.storyboard */; };
 		475143251C205BA400E9AB26 /* AZMetaBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143241C205BA400E9AB26 /* AZMetaBall.m */; };
 		475143281C2505C100E9AB26 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143271C2505C100E9AB26 /* Circle.m */; };
+		86BA6BCD1C5D20FCBE2EA3AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3EB84F9E9C4960925EE27E9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47253B131C36461000FF911A /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableViewController.h; path = ViewController/MainTableViewController.h; sourceTree = "<group>"; };
+		47253B141C36461000FF911A /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableViewController.m; path = ViewController/MainTableViewController.m; sourceTree = "<group>"; };
+		47253B161C3653EB00FF911A /* AZDIYHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZDIYHeader.h; path = AZMetaBall/MJRefresh/AZDIYHeader.h; sourceTree = SOURCE_ROOT; };
+		47253B171C3653EB00FF911A /* AZDIYHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZDIYHeader.m; path = MJRefresh/AZDIYHeader.m; sourceTree = "<group>"; };
+		47253B1F1C376FB400FF911A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		47253B221C37797200FF911A /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		47253B241C377CF400FF911A /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableViewCell.h; path = MJRefresh/MainTableViewCell.h; sourceTree = "<group>"; };
+		47253B251C377CF400FF911A /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableViewCell.m; path = MJRefresh/MainTableViewCell.m; sourceTree = "<group>"; };
+		47253B281C378E8A00FF911A /* CellTitle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CellTitle.plist; sourceTree = "<group>"; };
+		47253B2A1C37914700FF911A /* CellDetailText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CellDetailText.plist; sourceTree = "<group>"; };
+		47253B2C1C379B0500FF911A /* AZMetaBallCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZMetaBallCanvas.h; path = MetaBall/AZMetaBallCanvas.h; sourceTree = "<group>"; };
+		47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallCanvas.m; path = MetaBall/AZMetaBallCanvas.m; sourceTree = "<group>"; };
+		47253B2F1C379B7A00FF911A /* AZMetaBallItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZMetaBallItem.h; path = MetaBall/AZMetaBallItem.h; sourceTree = "<group>"; };
+		47253B301C379B7A00FF911A /* AZMetaBallItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallItem.m; path = MetaBall/AZMetaBallItem.m; sourceTree = "<group>"; };
 		475143081C20517F00E9AB26 /* AZMetaBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AZMetaBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4751430C1C20517F00E9AB26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4751430E1C20517F00E9AB26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4751430F1C20517F00E9AB26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		475143111C20517F00E9AB26 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		475143121C20517F00E9AB26 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		475143111C20517F00E9AB26 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ViewController/ViewController.h; sourceTree = "<group>"; };
+		475143121C20517F00E9AB26 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ViewController/ViewController.m; sourceTree = "<group>"; };
 		475143151C20517F00E9AB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		475143171C20517F00E9AB26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4751431A1C20517F00E9AB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4751431C1C20517F00E9AB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		475143231C205BA400E9AB26 /* AZMetaBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZMetaBall.h; path = MetaBall/AZMetaBall.h; sourceTree = "<group>"; };
 		475143241C205BA400E9AB26 /* AZMetaBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBall.m; path = MetaBall/AZMetaBall.m; sourceTree = "<group>"; };
 		475143261C2505C100E9AB26 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = MetaBall/Circle.h; sourceTree = "<group>"; };
 		475143271C2505C100E9AB26 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Circle.m; path = MetaBall/Circle.m; sourceTree = "<group>"; };
+		A672B0CD0385B2EA7CC6EF5A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B3EB84F9E9C4960925EE27E9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80D290CE27D7AB4EA253A60 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +64,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86BA6BCD1C5D20FCBE2EA3AD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40D26D5CD4EF6975FB858715 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3EB84F9E9C4960925EE27E9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		47253B121C36459000FF911A /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				47253B161C3653EB00FF911A /* AZDIYHeader.h */,
+				47253B171C3653EB00FF911A /* AZDIYHeader.m */,
+				47253B241C377CF400FF911A /* MainTableViewCell.h */,
+				47253B251C377CF400FF911A /* MainTableViewCell.m */,
+			);
+			name = MJRefresh;
+			sourceTree = "<group>";
+		};
+		47253B1B1C376A7E00FF911A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				47253B131C36461000FF911A /* MainTableViewController.h */,
+				47253B141C36461000FF911A /* MainTableViewController.m */,
+				475143111C20517F00E9AB26 /* ViewController.h */,
+				475143121C20517F00E9AB26 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		47253B211C37786B00FF911A /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				475143141C20517F00E9AB26 /* Main.storyboard */,
+				47253B221C37797200FF911A /* MainTableViewCell.xib */,
+				475143191C20517F00E9AB26 /* LaunchScreen.storyboard */,
+			);
+			name = xib;
+			sourceTree = "<group>";
+		};
 		475142FF1C20517F00E9AB26 = {
 			isa = PBXGroup;
 			children = (
 				4751430A1C20517F00E9AB26 /* AZMetaBall */,
 				475143091C20517F00E9AB26 /* Products */,
+				C42B62E8C2DEC623D676B3D2 /* Pods */,
+				40D26D5CD4EF6975FB858715 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,15 +132,14 @@
 		4751430A1C20517F00E9AB26 /* AZMetaBall */ = {
 			isa = PBXGroup;
 			children = (
+				47253B1B1C376A7E00FF911A /* ViewController */,
+				47253B121C36459000FF911A /* MJRefresh */,
 				475143221C205B6D00E9AB26 /* MetaBall */,
 				4751430E1C20517F00E9AB26 /* AppDelegate.h */,
 				4751430F1C20517F00E9AB26 /* AppDelegate.m */,
-				475143111C20517F00E9AB26 /* ViewController.h */,
-				475143121C20517F00E9AB26 /* ViewController.m */,
-				475143141C20517F00E9AB26 /* Main.storyboard */,
-				475143171C20517F00E9AB26 /* Assets.xcassets */,
-				475143191C20517F00E9AB26 /* LaunchScreen.storyboard */,
+				47253B211C37786B00FF911A /* xib */,
 				4751431C1C20517F00E9AB26 /* Info.plist */,
+				47253B1F1C376FB400FF911A /* Images.xcassets */,
 				4751430B1C20517F00E9AB26 /* Supporting Files */,
 			);
 			path = AZMetaBall;
@@ -82,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				4751430C1C20517F00E9AB26 /* main.m */,
+				47253B281C378E8A00FF911A /* CellTitle.plist */,
+				47253B2A1C37914700FF911A /* CellDetailText.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -93,8 +162,21 @@
 				475143241C205BA400E9AB26 /* AZMetaBall.m */,
 				475143261C2505C100E9AB26 /* Circle.h */,
 				475143271C2505C100E9AB26 /* Circle.m */,
+				47253B2C1C379B0500FF911A /* AZMetaBallCanvas.h */,
+				47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */,
+				47253B2F1C379B7A00FF911A /* AZMetaBallItem.h */,
+				47253B301C379B7A00FF911A /* AZMetaBallItem.m */,
 			);
 			name = MetaBall;
+			sourceTree = "<group>";
+		};
+		C42B62E8C2DEC623D676B3D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A672B0CD0385B2EA7CC6EF5A /* Pods.debug.xcconfig */,
+				C80D290CE27D7AB4EA253A60 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4751431F1C20517F00E9AB26 /* Build configuration list for PBXNativeTarget "AZMetaBall" */;
 			buildPhases = (
+				726AB9492C8327C58C23CDA2 /* Check Pods Manifest.lock */,
 				475143041C20517F00E9AB26 /* Sources */,
 				475143051C20517F00E9AB26 /* Frameworks */,
 				475143061C20517F00E9AB26 /* Resources */,
+				656C04A794E34D2344A5FFDA /* Embed Pods Frameworks */,
+				E6FE92E0398BFE5DCD72B4DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,13 +239,64 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47253B201C376FB400FF911A /* Images.xcassets in Resources */,
 				4751431B1C20517F00E9AB26 /* LaunchScreen.storyboard in Resources */,
-				475143181C20517F00E9AB26 /* Assets.xcassets in Resources */,
+				47253B231C37797200FF911A /* MainTableViewCell.xib in Resources */,
+				47253B291C378E8A00FF911A /* CellTitle.plist in Resources */,
+				47253B2B1C37914700FF911A /* CellDetailText.plist in Resources */,
 				475143161C20517F00E9AB26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		656C04A794E34D2344A5FFDA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		726AB9492C8327C58C23CDA2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6FE92E0398BFE5DCD72B4DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		475143041C20517F00E9AB26 /* Sources */ = {
@@ -168,10 +304,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				475143251C205BA400E9AB26 /* AZMetaBall.m in Sources */,
+				47253B311C379B7A00FF911A /* AZMetaBallItem.m in Sources */,
 				475143131C20517F00E9AB26 /* ViewController.m in Sources */,
+				47253B2E1C379B0500FF911A /* AZMetaBallCanvas.m in Sources */,
+				47253B151C36461000FF911A /* MainTableViewController.m in Sources */,
 				475143281C2505C100E9AB26 /* Circle.m in Sources */,
 				475143101C20517F00E9AB26 /* AppDelegate.m in Sources */,
 				4751430D1C20517F00E9AB26 /* main.m in Sources */,
+				47253B261C377CF400FF911A /* MainTableViewCell.m in Sources */,
+				47253B181C3653EB00FF911A /* AZDIYHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +422,10 @@
 		};
 		475143201C20517F00E9AB26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A672B0CD0385B2EA7CC6EF5A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = AZMetaBall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = azz.AZMetaBall;
@@ -292,8 +435,10 @@
 		};
 		475143211C20517F00E9AB26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C80D290CE27D7AB4EA253A60 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = AZMetaBall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = azz.AZMetaBall;
@@ -320,6 +465,7 @@
 				475143211C20517F00E9AB26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="508" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face_01" translatesAutoresizingMaskIntoConstraints="NO" id="a8u-Xh-ixR">
+                    <rect key="frame" x="10" y="13" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="73e-6z-M1F"/>
+                        <constraint firstAttribute="width" constant="50" id="tUL-bK-s1c"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dq1-9c-8lI">
+                    <rect key="frame" x="90" y="22" width="68" height="38"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tilte" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az5-yZ-MzN">
+                            <rect key="frame" x="0.0" y="0.0" width="39" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DetailView" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oqm-dD-rYy">
+                            <rect key="frame" x="0.0" y="22" width="68" height="16"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skin_tips_newmessage_ninetynine" translatesAutoresizingMaskIntoConstraints="NO" id="OTP-3q-aqg">
+                    <rect key="frame" x="456" y="31" width="42" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="4gG-em-dev"/>
+                        <constraint firstAttribute="height" constant="19" id="TwG-Jj-SiZ"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OTP-3q-aqg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6X6-XN-moY"/>
+                <constraint firstAttribute="trailing" secondItem="OTP-3q-aqg" secondAttribute="trailing" constant="10" id="DNn-Nx-TIZ"/>
+                <constraint firstItem="a8u-Xh-ixR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-2.5" id="Fue-bs-Zcf"/>
+                <constraint firstItem="dq1-9c-8lI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GAN-Z2-4yU"/>
+                <constraint firstItem="dq1-9c-8lI" firstAttribute="leading" secondItem="a8u-Xh-ixR" secondAttribute="trailing" constant="10" id="J3Z-UF-QAY"/>
+                <constraint firstItem="a8u-Xh-ixR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="lPG-pq-xPv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="azAccessoryView" destination="OTP-3q-aqg" id="Paz-ob-4tA"/>
+                <outlet property="azDetailTextLabel" destination="Oqm-dD-rYy" id="vb6-Q1-0hh"/>
+                <outlet property="azImageView" destination="a8u-Xh-ixR" id="bKE-99-Rle"/>
+                <outlet property="azTextLabel" destination="Az5-yZ-MzN" id="SU7-Cp-PgQ"/>
+            </connections>
+            <point key="canvasLocation" x="335" y="484"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="face_01" width="200" height="200"/>
+        <image name="skin_tips_newmessage_ninetynine" width="84" height="38"/>
+    </resources>
+</document>
