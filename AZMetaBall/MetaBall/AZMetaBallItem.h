@@ -14,7 +14,9 @@
 
 @property(nonatomic) UIView *view;
 
-@property(nonatomic) Circle *circle;
+@property(nonatomic) Circle *centerCircle;
+
+@property(nonatomic) Circle *touchCircle;
 
 - (instancetype)initWithView:(UIView *)view;
 

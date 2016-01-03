@@ -18,6 +18,12 @@
 		47253B311C379B7A00FF911A /* AZMetaBallItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B301C379B7A00FF911A /* AZMetaBallItem.m */; };
 		47253B341C37CFED00FF911A /* AZMetaBallGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B331C37CFED00FF911A /* AZMetaBallGestureRecognizer.m */; };
 		47253B371C37D61600FF911A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B361C37D61600FF911A /* MainViewController.m */; };
+		47253B3B1C38E40400FF911A /* PointUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B3A1C38E40400FF911A /* PointUtils.m */; };
+		47253B421C38FAEF00FF911A /* id_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47253B3D1C38FAEF00FF911A /* id_1.png */; };
+		47253B431C38FAEF00FF911A /* id_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 47253B3E1C38FAEF00FF911A /* id_2.png */; };
+		47253B441C38FAEF00FF911A /* id_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 47253B3F1C38FAEF00FF911A /* id_3.png */; };
+		47253B451C38FAEF00FF911A /* id_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 47253B401C38FAEF00FF911A /* id_4.png */; };
+		47253B461C38FAEF00FF911A /* id_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 47253B411C38FAEF00FF911A /* id_5.png */; };
 		4751430D1C20517F00E9AB26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751430C1C20517F00E9AB26 /* main.m */; };
 		475143101C20517F00E9AB26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751430F1C20517F00E9AB26 /* AppDelegate.m */; };
 		475143131C20517F00E9AB26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143121C20517F00E9AB26 /* ViewController.m */; };
@@ -47,6 +53,13 @@
 		47253B331C37CFED00FF911A /* AZMetaBallGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallGestureRecognizer.m; path = MetaBall/AZMetaBallGestureRecognizer.m; sourceTree = "<group>"; };
 		47253B351C37D61600FF911A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewController/MainViewController.h; sourceTree = "<group>"; };
 		47253B361C37D61600FF911A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewController/MainViewController.m; sourceTree = "<group>"; };
+		47253B391C38E40400FF911A /* PointUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointUtils.h; path = Utils/PointUtils.h; sourceTree = "<group>"; };
+		47253B3A1C38E40400FF911A /* PointUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PointUtils.m; path = Utils/PointUtils.m; sourceTree = "<group>"; };
+		47253B3D1C38FAEF00FF911A /* id_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = id_1.png; sourceTree = "<group>"; };
+		47253B3E1C38FAEF00FF911A /* id_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = id_2.png; sourceTree = "<group>"; };
+		47253B3F1C38FAEF00FF911A /* id_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = id_3.png; sourceTree = "<group>"; };
+		47253B401C38FAEF00FF911A /* id_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = id_4.png; sourceTree = "<group>"; };
+		47253B411C38FAEF00FF911A /* id_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = id_5.png; sourceTree = "<group>"; };
 		475143081C20517F00E9AB26 /* AZMetaBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AZMetaBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4751430C1C20517F00E9AB26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4751430E1C20517F00E9AB26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +132,27 @@
 			name = xib;
 			sourceTree = "<group>";
 		};
+		47253B381C38E3E200FF911A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				47253B391C38E40400FF911A /* PointUtils.h */,
+				47253B3A1C38E40400FF911A /* PointUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		47253B3C1C38FAB400FF911A /* ExplosionImages */ = {
+			isa = PBXGroup;
+			children = (
+				47253B3D1C38FAEF00FF911A /* id_1.png */,
+				47253B3E1C38FAEF00FF911A /* id_2.png */,
+				47253B3F1C38FAEF00FF911A /* id_3.png */,
+				47253B401C38FAEF00FF911A /* id_4.png */,
+				47253B411C38FAEF00FF911A /* id_5.png */,
+			);
+			name = ExplosionImages;
+			sourceTree = "<group>";
+		};
 		475142FF1C20517F00E9AB26 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +174,7 @@
 		4751430A1C20517F00E9AB26 /* AZMetaBall */ = {
 			isa = PBXGroup;
 			children = (
+				47253B381C38E3E200FF911A /* Utils */,
 				47253B1B1C376A7E00FF911A /* ViewController */,
 				47253B121C36459000FF911A /* MJRefresh */,
 				475143221C205B6D00E9AB26 /* MetaBall */,
@@ -156,6 +191,7 @@
 		4751430B1C20517F00E9AB26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47253B3C1C38FAB400FF911A /* ExplosionImages */,
 				4751430C1C20517F00E9AB26 /* main.m */,
 				47253B281C378E8A00FF911A /* CellTitle.plist */,
 				47253B2A1C37914700FF911A /* CellDetailText.plist */,
@@ -250,11 +286,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				47253B201C376FB400FF911A /* Images.xcassets in Resources */,
+				47253B451C38FAEF00FF911A /* id_4.png in Resources */,
+				47253B431C38FAEF00FF911A /* id_2.png in Resources */,
+				47253B441C38FAEF00FF911A /* id_3.png in Resources */,
 				4751431B1C20517F00E9AB26 /* LaunchScreen.storyboard in Resources */,
 				47253B231C37797200FF911A /* MainTableViewCell.xib in Resources */,
 				47253B291C378E8A00FF911A /* CellTitle.plist in Resources */,
 				47253B2B1C37914700FF911A /* CellDetailText.plist in Resources */,
+				47253B461C38FAEF00FF911A /* id_5.png in Resources */,
 				475143161C20517F00E9AB26 /* Main.storyboard in Resources */,
+				47253B421C38FAEF00FF911A /* id_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +357,7 @@
 				475143251C205BA400E9AB26 /* AZMetaBall.m in Sources */,
 				47253B341C37CFED00FF911A /* AZMetaBallGestureRecognizer.m in Sources */,
 				47253B311C379B7A00FF911A /* AZMetaBallItem.m in Sources */,
+				47253B3B1C38E40400FF911A /* PointUtils.m in Sources */,
 				475143131C20517F00E9AB26 /* ViewController.m in Sources */,
 				47253B2E1C379B0500FF911A /* AZMetaBallCanvas.m in Sources */,
 				47253B151C36461000FF911A /* MainTableViewController.m in Sources */,

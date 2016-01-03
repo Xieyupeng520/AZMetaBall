@@ -125,9 +125,9 @@
                                     <outlet property="delegate" destination="IAM-Qc-tUk" id="2e2-oB-bTj"/>
                                 </connections>
                             </tableView>
-                            <view userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S06-zz-MwE" customClass="AZMetaBallCanvas">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S06-zz-MwE" customClass="AZMetaBallCanvas">
                                 <rect key="frame" x="-4" y="64" width="320" height="480"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>

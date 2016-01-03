@@ -28,11 +28,10 @@
 
     //为了让自定义控件能够响应事件，需要把上面的contentView的事件去掉
     self.contentView.userInteractionEnabled = NO;
+    
+    self.azAccessoryView.adjustsImageWhenHighlighted = YES;
 }
 
-- (void)drag:(UITapGestureRecognizer *)recognizer {
-    NSLog(@"touchPoint ");
-}
 
 - (void)setData:(NSIndexPath *)indexPath {
 //    int n = arc4random_uniform(9) + 1;

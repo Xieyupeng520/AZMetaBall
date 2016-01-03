@@ -20,12 +20,20 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AZMetaBall" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wyl-cO-2Lq">
                                 <rect key="frame" x="90" y="104" width="152" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Github:https://github.com/Xieyupeng520/AZMetaBall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1C-tw-C9n">
+                                <rect key="frame" x="9" y="418" width="302" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.81934626359999996" green="1" blue="0.86676328410000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="x1C-tw-C9n" secondAttribute="bottom" constant="129" id="FJB-ql-LB9"/>
+                            <constraint firstItem="x1C-tw-C9n" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="GY9-RE-2hP"/>
                             <constraint firstItem="Wyl-cO-2Lq" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="184" id="aYJ-ga-9YX"/>
                             <constraint firstItem="Wyl-cO-2Lq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bN3-Lz-7yP"/>
                         </constraints>
