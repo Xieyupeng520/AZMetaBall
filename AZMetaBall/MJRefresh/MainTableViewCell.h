@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *azImageView;
 @property (weak, nonatomic) IBOutlet UITextField *azTextLabel;
 @property (weak, nonatomic) IBOutlet UITextField *azDetailTextLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *azAccessoryView;
+@property (weak, nonatomic) IBOutlet UIButton *azAccessoryView;
 
 - (void)setData:(NSIndexPath *)indexPath;
 @end

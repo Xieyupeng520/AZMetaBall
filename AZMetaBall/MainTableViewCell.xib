@@ -11,17 +11,17 @@
             <rect key="frame" x="0.0" y="0.0" width="508" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face_01" translatesAutoresizingMaskIntoConstraints="NO" id="a8u-Xh-ixR">
+                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face_01" translatesAutoresizingMaskIntoConstraints="NO" id="a8u-Xh-ixR">
                     <rect key="frame" x="10" y="13" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="73e-6z-M1F"/>
                         <constraint firstAttribute="width" constant="50" id="tUL-bK-s1c"/>
                     </constraints>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dq1-9c-8lI">
-                    <rect key="frame" x="90" y="22" width="68" height="38"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="dq1-9c-8lI">
+                    <rect key="frame" x="70" y="21" width="68" height="38"/>
                     <subviews>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tilte" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az5-yZ-MzN">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tilte" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Az5-yZ-MzN">
                             <rect key="frame" x="0.0" y="0.0" width="39" height="22"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits"/>
@@ -34,26 +34,30 @@
                         </textField>
                     </subviews>
                 </stackView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skin_tips_newmessage_ninetynine" translatesAutoresizingMaskIntoConstraints="NO" id="OTP-3q-aqg">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXQ-1t-Wk8">
                     <rect key="frame" x="456" y="31" width="42" height="19"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="42" id="4gG-em-dev"/>
-                        <constraint firstAttribute="height" constant="19" id="TwG-Jj-SiZ"/>
+                        <constraint firstAttribute="height" constant="19" id="AOn-9N-4cP"/>
+                        <constraint firstAttribute="width" constant="42" id="vAb-Gm-I2f"/>
                     </constraints>
-                </imageView>
+                    <state key="normal" backgroundImage="skin_tips_newmessage_ninetynine">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="OTP-3q-aqg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6X6-XN-moY"/>
-                <constraint firstAttribute="trailing" secondItem="OTP-3q-aqg" secondAttribute="trailing" constant="10" id="DNn-Nx-TIZ"/>
+                <constraint firstAttribute="trailing" secondItem="PXQ-1t-Wk8" secondAttribute="trailing" constant="10" id="5cb-eg-mb6"/>
                 <constraint firstItem="a8u-Xh-ixR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-2.5" id="Fue-bs-Zcf"/>
                 <constraint firstItem="dq1-9c-8lI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="GAN-Z2-4yU"/>
                 <constraint firstItem="dq1-9c-8lI" firstAttribute="leading" secondItem="a8u-Xh-ixR" secondAttribute="trailing" constant="10" id="J3Z-UF-QAY"/>
+                <constraint firstItem="PXQ-1t-Wk8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lMB-D1-gGQ"/>
                 <constraint firstItem="a8u-Xh-ixR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="lPG-pq-xPv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="azAccessoryView" destination="OTP-3q-aqg" id="Paz-ob-4tA"/>
+                <outlet property="azAccessoryView" destination="PXQ-1t-Wk8" id="Qk0-P1-Cb2"/>
                 <outlet property="azDetailTextLabel" destination="Oqm-dD-rYy" id="vb6-Q1-0hh"/>
                 <outlet property="azImageView" destination="a8u-Xh-ixR" id="bKE-99-Rle"/>
                 <outlet property="azTextLabel" destination="Az5-yZ-MzN" id="SU7-Cp-PgQ"/>

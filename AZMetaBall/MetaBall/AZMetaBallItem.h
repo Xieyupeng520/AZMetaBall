@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "Circle.h"
 
 @interface AZMetaBallItem : NSObject
+
+@property(nonatomic) UIView *view;
+
+@property(nonatomic) Circle *circle;
+
+- (instancetype)initWithView:(UIView *)view;
 
 @end

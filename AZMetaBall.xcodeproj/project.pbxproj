@@ -16,6 +16,8 @@
 		47253B2B1C37914700FF911A /* CellDetailText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47253B2A1C37914700FF911A /* CellDetailText.plist */; };
 		47253B2E1C379B0500FF911A /* AZMetaBallCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */; };
 		47253B311C379B7A00FF911A /* AZMetaBallItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B301C379B7A00FF911A /* AZMetaBallItem.m */; };
+		47253B341C37CFED00FF911A /* AZMetaBallGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B331C37CFED00FF911A /* AZMetaBallGestureRecognizer.m */; };
+		47253B371C37D61600FF911A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B361C37D61600FF911A /* MainViewController.m */; };
 		4751430D1C20517F00E9AB26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751430C1C20517F00E9AB26 /* main.m */; };
 		475143101C20517F00E9AB26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751430F1C20517F00E9AB26 /* AppDelegate.m */; };
 		475143131C20517F00E9AB26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143121C20517F00E9AB26 /* ViewController.m */; };
@@ -41,6 +43,10 @@
 		47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallCanvas.m; path = MetaBall/AZMetaBallCanvas.m; sourceTree = "<group>"; };
 		47253B2F1C379B7A00FF911A /* AZMetaBallItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZMetaBallItem.h; path = MetaBall/AZMetaBallItem.h; sourceTree = "<group>"; };
 		47253B301C379B7A00FF911A /* AZMetaBallItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallItem.m; path = MetaBall/AZMetaBallItem.m; sourceTree = "<group>"; };
+		47253B321C37CFED00FF911A /* AZMetaBallGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZMetaBallGestureRecognizer.h; path = MetaBall/AZMetaBallGestureRecognizer.h; sourceTree = "<group>"; };
+		47253B331C37CFED00FF911A /* AZMetaBallGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallGestureRecognizer.m; path = MetaBall/AZMetaBallGestureRecognizer.m; sourceTree = "<group>"; };
+		47253B351C37D61600FF911A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewController/MainViewController.h; sourceTree = "<group>"; };
+		47253B361C37D61600FF911A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewController/MainViewController.m; sourceTree = "<group>"; };
 		475143081C20517F00E9AB26 /* AZMetaBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AZMetaBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4751430C1C20517F00E9AB26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4751430E1C20517F00E9AB26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 				47253B141C36461000FF911A /* MainTableViewController.m */,
 				475143111C20517F00E9AB26 /* ViewController.h */,
 				475143121C20517F00E9AB26 /* ViewController.m */,
+				47253B351C37D61600FF911A /* MainViewController.h */,
+				47253B361C37D61600FF911A /* MainViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -166,6 +174,8 @@
 				47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */,
 				47253B2F1C379B7A00FF911A /* AZMetaBallItem.h */,
 				47253B301C379B7A00FF911A /* AZMetaBallItem.m */,
+				47253B321C37CFED00FF911A /* AZMetaBallGestureRecognizer.h */,
+				47253B331C37CFED00FF911A /* AZMetaBallGestureRecognizer.m */,
 			);
 			name = MetaBall;
 			sourceTree = "<group>";
@@ -304,11 +314,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				475143251C205BA400E9AB26 /* AZMetaBall.m in Sources */,
+				47253B341C37CFED00FF911A /* AZMetaBallGestureRecognizer.m in Sources */,
 				47253B311C379B7A00FF911A /* AZMetaBallItem.m in Sources */,
 				475143131C20517F00E9AB26 /* ViewController.m in Sources */,
 				47253B2E1C379B0500FF911A /* AZMetaBallCanvas.m in Sources */,
 				47253B151C36461000FF911A /* MainTableViewController.m in Sources */,
 				475143281C2505C100E9AB26 /* Circle.m in Sources */,
+				47253B371C37D61600FF911A /* MainViewController.m in Sources */,
 				475143101C20517F00E9AB26 /* AppDelegate.m in Sources */,
 				4751430D1C20517F00E9AB26 /* main.m in Sources */,
 				47253B261C377CF400FF911A /* MainTableViewCell.m in Sources */,

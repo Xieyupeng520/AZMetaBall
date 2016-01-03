@@ -26,6 +26,12 @@
     self.titleArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CellTitle" ofType:@"plist"]];
     self.detailTextArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"CellDetailText" ofType:@"plist"]];
 
+    //为了让自定义控件能够响应事件，需要把上面的contentView的事件去掉
+    self.contentView.userInteractionEnabled = NO;
+}
+
+- (void)drag:(UITapGestureRecognizer *)recognizer {
+    NSLog(@"touchPoint ");
 }
 
 - (void)setData:(NSIndexPath *)indexPath {
@@ -37,6 +43,7 @@
     
     
     self.azImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"face_0%d", n]];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

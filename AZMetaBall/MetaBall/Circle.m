@@ -14,7 +14,9 @@
     Circle *circle = [[Circle alloc] init];
     
     circle.radius = radius;
+    circle.orignRadius = radius;
     circle.centerPoint = center;
+    
     circle.color = [UIColor blackColor];
     
     return circle;
@@ -30,4 +32,5 @@
 - (NSString *)description {
     return [NSString stringWithFormat:@"point:(%f, %f) radius:%f  color:%@", self.centerPoint.x, self.centerPoint.y, self.radius, self.color];
 }
+
 @end

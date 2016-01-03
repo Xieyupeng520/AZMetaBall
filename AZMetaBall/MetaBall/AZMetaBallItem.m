@@ -10,4 +10,19 @@
 
 @implementation AZMetaBallItem
 
+- (instancetype)initWithView:(UIView *)view {
+    self = [super init];
+    if(self) {
+        self.view = view;
+        
+    
+        float w = view.frame.size.width;
+        float h = view.frame.size.height;
+        
+        self.circle = [Circle initWithcenterPoint:view.center radius:MIN(w, h)];
+    }
+    return self;
+}
+
+
 @end

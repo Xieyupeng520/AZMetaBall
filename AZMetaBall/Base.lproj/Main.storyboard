@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -77,7 +78,7 @@
                         <color key="barTintColor" red="0.81934626359999996" green="1" blue="0.86676328410000003" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
-                        <segue destination="oKk-ku-UcB" kind="relationship" relationship="rootViewController" id="3ZC-q2-ESd"/>
+                        <segue destination="IAM-Qc-tUk" kind="relationship" relationship="rootViewController" id="eba-zu-gsY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWg-5b-mli" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,7 +88,6 @@
         <!--AZMetaBall-->
         <scene sceneID="hQj-Ag-UuD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HRX-g7-5aX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="oKk-ku-UcB" customClass="MainTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fsr-pP-U4Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
@@ -101,8 +101,60 @@
                     <navigationItem key="navigationItem" title="AZMetaBall" id="86c-Ni-dx1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRX-g7-5aX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-218" y="1103"/>
+        </scene>
+        <!--AZMetaBall-->
+        <scene sceneID="aJY-ss-zmm">
+            <objects>
+                <viewController id="IAM-Qc-tUk" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9UY-jv-VCr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ivO-pS-3Y6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zu9-h4-uBP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cAE-pb-zNk">
+                                <rect key="frame" x="-4" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IAM-Qc-tUk" id="qFB-2k-IsB"/>
+                                    <outlet property="delegate" destination="IAM-Qc-tUk" id="2e2-oB-bTj"/>
+                                </connections>
+                            </tableView>
+                            <view userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S06-zz-MwE" customClass="AZMetaBallCanvas">
+                                <rect key="frame" x="-4" y="64" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cAE-pb-zNk" firstAttribute="top" secondItem="9UY-jv-VCr" secondAttribute="bottom" constant="-64" id="1YZ-EU-H3d"/>
+                            <constraint firstItem="cAE-pb-zNk" firstAttribute="width" secondItem="zu9-h4-uBP" secondAttribute="width" id="2ot-Be-Kai"/>
+                            <constraint firstItem="cAE-pb-zNk" firstAttribute="height" secondItem="zu9-h4-uBP" secondAttribute="height" constant="-64" id="9KU-Gd-eQo"/>
+                            <constraint firstItem="cAE-pb-zNk" firstAttribute="leading" secondItem="zu9-h4-uBP" secondAttribute="leadingMargin" constant="-20" id="IUS-JY-igp"/>
+                            <constraint firstItem="S06-zz-MwE" firstAttribute="top" secondItem="9UY-jv-VCr" secondAttribute="bottom" id="J3l-Xc-SnI"/>
+                            <constraint firstItem="S06-zz-MwE" firstAttribute="width" secondItem="zu9-h4-uBP" secondAttribute="width" id="bNk-eC-BWi"/>
+                            <constraint firstItem="S06-zz-MwE" firstAttribute="height" secondItem="zu9-h4-uBP" secondAttribute="height" id="bS4-Cl-nsv"/>
+                            <constraint firstItem="S06-zz-MwE" firstAttribute="leading" secondItem="zu9-h4-uBP" secondAttribute="leadingMargin" constant="-20" id="oOp-Zt-Y95"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AZMetaBall" id="5oY-GM-ke1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="azMetaBallView" destination="S06-zz-MwE" id="oKn-WU-bLO"/>
+                        <outlet property="listView" destination="cAE-pb-zNk" id="khl-us-1KS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUl-Dd-0IW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="1742"/>
         </scene>
     </scenes>
 </document>

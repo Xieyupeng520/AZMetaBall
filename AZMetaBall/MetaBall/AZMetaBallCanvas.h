@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AZMetaBallItem.h"
 
 @interface AZMetaBallCanvas : UIView
+
+@property(nonatomic) AZMetaBallItem *azMetaBallItem;
+
+- (void)attach:(UIView *)item;
 
 @end
