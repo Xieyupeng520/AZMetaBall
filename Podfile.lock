@@ -1,10 +1,13 @@
 PODS:
   - MJRefresh (3.0.8)
+  - pop (1.0.8)
 
 DEPENDENCIES:
   - MJRefresh
+  - pop (~> 1.0)
 
 SPEC CHECKSUMS:
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
 
 COCOAPODS: 0.39.0

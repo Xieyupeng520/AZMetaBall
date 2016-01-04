@@ -7,6 +7,8 @@
 //
 
 #import "AZMetaBallCanvas.h"
+#import "POP.h"
+
 
 #define kMax_Distance 75
 
@@ -76,6 +78,20 @@
                 [self explosion];
             } else {
                 recognizer.view.hidden = NO;
+                POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+                anim.fromValue = [NSValue valueWithCGPoint:_touchPoint];
+                anim.toValue = [NSValue valueWithCGPoint:recognizer.view.center];
+                anim.springBounciness = 4.f;    //[0-20] 弹力 越大则震动幅度越大
+                anim.springSpeed = 20.f;        //[0-20] 速度 越大则动画结束越快
+                anim.dynamicsMass = 6.f;        //质量
+                anim.dynamicsFriction = 30.f;   //摩擦，值越大摩擦力越大，越快结束弹簧效果
+                
+                [recognizer.view pop_addAnimation:anim forKey:kPOPLayerPosition];
+                
+                recognizer.view.center = _touchPoint;
+                
+                NSLog(@"_touchPoint = %f , %f", _touchPoint.x, _touchPoint.y);
+                NSLog(@"目标point = %f, %f", recognizer.view.center.x, recognizer.view.center.y);
             }
             
             [self reset];
@@ -116,7 +132,7 @@
 - (void)drawCircle:(UIBezierPath *)path circle:(Circle *)circle {
     [_path addArcWithCenter:circle.centerPoint radius:circle.radius startAngle:0 endAngle:360 clockwise:true];
     
-    [circle.color setFill];
+    [circle.color set];
     [_path fill];
     
     [_path removeAllPoints];
