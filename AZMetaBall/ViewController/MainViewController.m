@@ -29,6 +29,8 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             // 结束刷新
             [tableView.mj_header endRefreshing];
+            
+            [self.listView reloadData];
         });
     }];
     
@@ -61,7 +63,11 @@
     [cell setData:indexPath];
     
     //给所有的红点加上监听事件
+    [self.azMetaBallView attach:cell.azImageView];
     [self.azMetaBallView attach:cell.azAccessoryView];
+    [self.azMetaBallView attach:cell.azTextLabel];
+    [self.azMetaBallView attach:cell.azDetailTextLabel];
+    [self.azMetaBallView attach:cell];
     
     return cell;
 }

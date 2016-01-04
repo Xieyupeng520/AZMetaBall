@@ -8,7 +8,7 @@
 
 #import "AZMetaBallCanvas.h"
 #import "POP.h"
-
+#import "PointUtils.h"
 
 #define kMax_Distance 75
 
@@ -58,6 +58,7 @@
 
 - (void)drag:(UIPanGestureRecognizer *)recognizer {
     _touchPoint = [recognizer locationInView:self];
+    NSLog(@"touch Point : %f, %f", _touchPoint.x, _touchPoint.y);
     
     UIView *touchView = recognizer.view;
     
@@ -78,20 +79,7 @@
                 [self explosion];
             } else {
                 recognizer.view.hidden = NO;
-                POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-                anim.fromValue = [NSValue valueWithCGPoint:_touchPoint];
-                anim.toValue = [NSValue valueWithCGPoint:recognizer.view.center];
-                anim.springBounciness = 4.f;    //[0-20] 弹力 越大则震动幅度越大
-                anim.springSpeed = 20.f;        //[0-20] 速度 越大则动画结束越快
-                anim.dynamicsMass = 6.f;        //质量
-                anim.dynamicsFriction = 30.f;   //摩擦，值越大摩擦力越大，越快结束弹簧效果
-                
-                [recognizer.view pop_addAnimation:anim forKey:kPOPLayerPosition];
-                
-                recognizer.view.center = _touchPoint;
-                
-                NSLog(@"_touchPoint = %f , %f", _touchPoint.x, _touchPoint.y);
-                NSLog(@"目标point = %f, %f", recognizer.view.center.x, recognizer.view.center.y);
+                [self springBack:recognizer.view from:_touchPoint to:recognizer.view.center];
             }
             
             [self reset];
@@ -232,7 +220,8 @@
     [_path addQuadCurveToPoint:endPoint controlPoint:controlPoint];
 }
 
-#pragma explosion animation
+#pragma animation
+//爆炸效果
 - (void)explosion {
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (int i = 1; i < 6; i++) {
@@ -249,5 +238,31 @@
     [iV setAnimationRepeatCount:1];
     [iV startAnimating];
     [self addSubview:iV];
+}
+
+//回弹效果
+- (void)springBack:(UIView *)view from:(CGPoint)fromPoint to:(CGPoint)toPoint{
+    
+    //计算fromPoint在view的superView为坐标系里的坐标
+    CGPoint viewPoint = [PointUtils getGlobalCenterPositionOf:view];
+    fromPoint.x = fromPoint.x - viewPoint.x + toPoint.x;
+    fromPoint.y = fromPoint.y - viewPoint.y + toPoint.y;
+    
+    view.center = fromPoint;
+    
+    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
+    anim.fromValue = [NSValue valueWithCGPoint:fromPoint];
+    anim.toValue = [NSValue valueWithCGPoint:toPoint];
+    
+    anim.springBounciness = 4.f;    //[0-20] 弹力 越大则震动幅度越大
+    anim.springSpeed = 20.f;        //[0-20] 速度 越大则动画结束越快
+    anim.dynamicsMass = 3.f;        //质量
+    anim.dynamicsFriction = 30.f;   //摩擦，值越大摩擦力越大，越快结束弹簧效果
+    anim.dynamicsTension = 676.f;   //拉力
+    
+    [view pop_addAnimation:anim forKey:kPOPLayerPosition];
+    
+    NSLog(@"源Point = %f , %f", fromPoint.x, fromPoint.y);
+    NSLog(@"目标point = %f, %f", toPoint.x, toPoint.y);
 }
 @end
