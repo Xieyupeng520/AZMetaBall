@@ -10,21 +10,48 @@
 #import "POP.h"
 #import "PointUtils.h"
 
-#define kMax_Distance 75
-
 @interface AZMetaBallCanvas() {
-    UIBezierPath *_path; //画线
+    UIBezierPath *_path;    //画线
     
-    CGPoint _touchPoint; //触摸点
+    CGPoint _touchPoint;    //触摸点
     
-    bool _isTouch;   //是否触摸
+    bool _isTouch;          //是否触摸
     
-    float _distance; //连心线长度
+    float _distance;        //连心线长度
+    
 }
 
 @end
 @implementation AZMetaBallCanvas
 
+- (instancetype)init {
+    self = [super init];
+    NSLog(@"init");
+    if (self) {
+        [self initData];
+    }
+    return self;
+}
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    NSLog(@"initWithFrame");
+    if (self) {
+        [self initData];
+    }
+    return self;
+}
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    NSLog(@"initWithCorder");
+    if (self) {
+        [self initData];
+    }
+    return self;
+}
+
+- (void)initData {
+    //init data
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -33,7 +60,7 @@
     
     [self caculateDistance: self.azMetaBallItem.centerCircle Circle2:self.azMetaBallItem.touchCircle];
     
-    if (!_isTouch || _distance > kMax_Distance) {
+    if (!_isTouch || _distance > self.azMetaBallItem.maxDistance) {
         return;
     }
     
@@ -56,6 +83,7 @@
     [item addGestureRecognizer:drag];
 }
 
+
 - (void)drag:(UIPanGestureRecognizer *)recognizer {
     _touchPoint = [recognizer locationInView:self];
     NSLog(@"touch Point : %f, %f", _touchPoint.x, _touchPoint.y);
@@ -75,7 +103,7 @@
         }
         case UIGestureRecognizerStateEnded: {
             
-            if (_distance > kMax_Distance) {
+            if (_distance > self.azMetaBallItem.maxDistance) {
                 [self explosion];
             } else {
                 recognizer.view.hidden = NO;
@@ -264,5 +292,12 @@
     
     NSLog(@"源Point = %f , %f", fromPoint.x, fromPoint.y);
     NSLog(@"目标point = %f, %f", toPoint.x, toPoint.y);
+    
+    
+//    [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+//        view.center = toPoint;
+//    } completion:^(BOOL finished) {
+//
+//    }];
 }
 @end

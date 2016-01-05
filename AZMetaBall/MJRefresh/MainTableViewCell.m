@@ -34,6 +34,11 @@
 
 
 - (void)setData:(NSIndexPath *)indexPath {
+    self.azImageView.hidden = NO;
+    self.azTextLabel.hidden = NO;
+    self.azDetailTextLabel.hidden = NO;
+    self.azAccessoryView.hidden = NO;
+    
 //    int n = arc4random_uniform(9) + 1;
     int n = indexPath.row % 9 + 1;
     

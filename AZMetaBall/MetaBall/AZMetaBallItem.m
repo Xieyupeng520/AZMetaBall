@@ -23,6 +23,12 @@
         
         self.centerCircle = [Circle initWithcenterPoint:point radius:MIN(w, h)/2 color:[UIColor colorWithRed:247/255.0 green:76/255.0 blue:49/255.0 alpha:1]];
         self.touchCircle = [Circle initWithcenterPoint:point radius:MIN(w, h)/2 color:[UIColor colorWithRed:247/255.0 green:76/255.0 blue:49/255 alpha:1]];
+        
+        self.maxDistance = kMax_Distance;
+        
+        if (MIN(w, h) > 50) {
+            self.maxDistance = kMax_Distance * 2;
+        }
     }
     return self;
 }

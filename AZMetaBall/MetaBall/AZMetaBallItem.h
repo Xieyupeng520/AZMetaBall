@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "Circle.h"
 
+#define kMax_Distance 75
+
 @interface AZMetaBallItem : NSObject
 
 @property(nonatomic) UIView *view;
@@ -17,6 +19,8 @@
 @property(nonatomic) Circle *centerCircle;
 
 @property(nonatomic) Circle *touchCircle;
+
+@property(nonatomic) float maxDistance; //最大距离
 
 - (instancetype)initWithView:(UIView *)view;
 
