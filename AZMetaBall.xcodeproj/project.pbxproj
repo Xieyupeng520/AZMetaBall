@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11F6FAA01C3CE39500AA4152 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F6FA9F1C3CE39500AA4152 /* Images.xcassets */; };
 		47253B151C36461000FF911A /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B141C36461000FF911A /* MainTableViewController.m */; };
 		47253B181C3653EB00FF911A /* AZDIYHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B171C3653EB00FF911A /* AZDIYHeader.m */; };
-		47253B201C376FB400FF911A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47253B1F1C376FB400FF911A /* Images.xcassets */; };
 		47253B231C37797200FF911A /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47253B221C37797200FF911A /* MainTableViewCell.xib */; };
 		47253B261C377CF400FF911A /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B251C377CF400FF911A /* MainTableViewCell.m */; };
 		47253B291C378E8A00FF911A /* CellTitle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47253B281C378E8A00FF911A /* CellTitle.plist */; };
@@ -34,11 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11F6FA9F1C3CE39500AA4152 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47253B131C36461000FF911A /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableViewController.h; path = ViewController/MainTableViewController.h; sourceTree = "<group>"; };
 		47253B141C36461000FF911A /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableViewController.m; path = ViewController/MainTableViewController.m; sourceTree = "<group>"; };
 		47253B161C3653EB00FF911A /* AZDIYHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZDIYHeader.h; path = AZMetaBall/MJRefresh/AZDIYHeader.h; sourceTree = SOURCE_ROOT; };
 		47253B171C3653EB00FF911A /* AZDIYHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZDIYHeader.m; path = MJRefresh/AZDIYHeader.m; sourceTree = "<group>"; };
-		47253B1F1C376FB400FF911A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47253B221C37797200FF911A /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		47253B241C377CF400FF911A /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTableViewCell.h; path = MJRefresh/MainTableViewCell.h; sourceTree = "<group>"; };
 		47253B251C377CF400FF911A /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTableViewCell.m; path = MJRefresh/MainTableViewCell.m; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				4751430F1C20517F00E9AB26 /* AppDelegate.m */,
 				47253B211C37786B00FF911A /* xib */,
 				4751431C1C20517F00E9AB26 /* Info.plist */,
-				47253B1F1C376FB400FF911A /* Images.xcassets */,
+				11F6FA9F1C3CE39500AA4152 /* Images.xcassets */,
 				4751430B1C20517F00E9AB26 /* Supporting Files */,
 			);
 			path = AZMetaBall;
@@ -281,11 +281,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47253B201C376FB400FF911A /* Images.xcassets in Resources */,
 				47253B451C38FAEF00FF911A /* id_4.png in Resources */,
 				47253B431C38FAEF00FF911A /* id_2.png in Resources */,
 				47253B441C38FAEF00FF911A /* id_3.png in Resources */,
 				4751431B1C20517F00E9AB26 /* LaunchScreen.storyboard in Resources */,
+				11F6FAA01C3CE39500AA4152 /* Images.xcassets in Resources */,
 				47253B231C37797200FF911A /* MainTableViewCell.xib in Resources */,
 				47253B291C378E8A00FF911A /* CellTitle.plist in Resources */,
 				47253B2B1C37914700FF911A /* CellDetailText.plist in Resources */,
