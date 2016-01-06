@@ -22,6 +22,8 @@
 
 @property(nonatomic) float maxDistance; //最大距离
 
+@property(nonatomic) UIColor *color;    //颜色
+
 - (instancetype)initWithView:(UIView *)view;
 
 @end

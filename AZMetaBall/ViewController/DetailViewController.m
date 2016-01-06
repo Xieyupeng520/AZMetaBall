@@ -6,15 +6,15 @@
 //  Copyright © 2015年 阿曌. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DetailViewController.h"
 #import "AZMetaBall.h"
 
-@interface ViewController ()
+@interface DetailViewController ()
 @property (strong, nonatomic) IBOutlet AZMetaBall *azMetaBall;
 
 @end
 
-@implementation ViewController
+@implementation DetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +44,10 @@
         default:
             break;
     }
+}
+- (IBAction)fillOrStroke:(id)sender {
+        self.azMetaBall.isFill = !self.azMetaBall.isFill;
+
 }
 
 @end

@@ -20,6 +20,7 @@
 #pragma mark 在这里设置子控件的位置和尺寸
 - (void)placeSubviews
 {
+    [super placeSubviews];
 }
 
 #pragma mark 监听scrollView的contentOffset改变

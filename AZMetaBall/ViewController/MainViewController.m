@@ -76,10 +76,14 @@
     return 70;
 }
 
-//取消选中
+//选中时取消选中
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.listView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self performSegueWithIdentifier:@"toDetail" sender:nil];
+//    [self.navigationController pushViewController:[[ViewController alloc] init] animated:YES];
 }
+
 
 /*
 #pragma mark - Navigation

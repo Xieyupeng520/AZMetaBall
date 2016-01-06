@@ -14,6 +14,8 @@
     UIBezierPath *_path;
     
     CGPoint _touchPoint;
+    
+    bool _isFill;
 }
 
 @end
@@ -45,10 +47,14 @@
 }
 
 - (void)initData {
+    _isFill = NO;
+    
     _touchCircle = [Circle initWithcenterPoint:self.center radius:RADIUS color:[UIColor redColor]];
     _centerCircle = [Circle initWithcenterPoint:self.center radius:RADIUS color:[UIColor blueColor]];
     
     _touchPoint = self.center;
+    
+    NSLog(@"self.center (%f, %f)", self.center.x, self.center.y);
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -124,7 +130,7 @@
 //    [self drawLineStartAt:p3 EndAt:p4];
     
     //连心线中点坐标(用来作为控制点）
-    CGPoint d_center = CGPointMake((circle1_x + circle2_x) / 2, (circle1_y + circle2_y) / 2);
+//    CGPoint d_center = CGPointMake((circle1_x + circle2_x) / 2, (circle1_y + circle2_y) / 2);
     
     CGPoint p1_center_p4 = CGPointMake((p1_x + p4_x) / 2, (p1_y + p4_y) / 2);
     CGPoint p2_center_p3 = CGPointMake((p2_x + p3_x) / 2, (p2_y + p3_y) / 2);
@@ -137,10 +143,9 @@
     [_path moveToPoint:p1];
     [_path closePath];
     
-    if (IS_FILL) {
+    if (_isFill) {
         [_path fill];
-    }
-    if (IS_STROKE) {
+    }else {
         [_path stroke];
     }
 }
@@ -170,10 +175,9 @@
 - (void)drawCircle:(UIBezierPath *)path circle:(Circle *)circle {
     [_path addArcWithCenter:circle.centerPoint radius:circle.radius startAngle:0 endAngle:360 clockwise:true];
     
-    if (IS_FILL) {
+    if (_isFill) {
         [_path fill];
-    }
-    if (IS_STROKE) {
+    }else {
         [_path stroke];
     }
     
@@ -194,6 +198,12 @@
     UITouch *touch = [touches anyObject];
     _touchPoint = [touch locationInView:self];
     
+    [self setNeedsDisplay];
+}
+
+#pragma setter
+- (void)setIsFill:(bool)isFill {
+    _isFill = isFill;
     [self setNeedsDisplay];
 }
 @end

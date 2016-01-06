@@ -1,65 +1,117 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2kg-t4-iSU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2kg-t4-iSU">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="AZMetaBall">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="htI-Jg-oOr">
-                                <rect key="frame" x="127" y="41" width="211" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="OOy-Ry-VjD">
+                                <rect key="frame" x="50" y="125" width="315" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="固定圆半径" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-g8-re6">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="htI-Jg-oOr">
+                                        <rect key="frame" x="113" y="0.0" width="204" height="31"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="0cP-VK-hhW"/>
+                                            <constraint firstAttribute="width" constant="200" id="zaT-EC-Ycp"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onProgressChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vjJ-fm-G6s"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0JE-Nk-F94">
+                                <rect key="frame" x="50" y="175" width="315" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="移动圆半径" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b02-Y9-TRZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Eet-Vg-S6n">
+                                        <rect key="frame" x="113" y="0.0" width="204" height="31"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Tof-59-Zr6"/>
+                                            <constraint firstAttribute="height" constant="30" id="zyB-dI-BBD"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onProgressChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IBc-6B-8tO"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZa-bu-ZTX">
+                                <rect key="frame" x="159.5" y="72" width="95" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="切换填充/描边"/>
                                 <connections>
-                                    <action selector="onProgressChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vjJ-fm-G6s"/>
+                                    <action selector="fillOrStroke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0H-Ce-XDA"/>
                                 </connections>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="固定圆半径" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zBa-7R-6va">
-                                <rect key="frame" x="8" y="41" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="移动圆半径" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4p-yQ-qf4">
-                                <rect key="frame" x="8" y="87" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <slider opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Eet-Vg-S6n">
-                                <rect key="frame" x="127" y="87" width="210" height="31"/>
-                                <connections>
-                                    <action selector="onProgressChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IBc-6B-8tO"/>
-                                </connections>
-                            </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="模仿QQ下拉" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-VR-68U">
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="模仿QQ下拉" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRA-VR-68U">
                                 <rect key="frame" x="6" y="133" width="99" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="neq-LF-UnN">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="neq-LF-UnN">
                                 <rect key="frame" x="128" y="133" width="210" height="31"/>
+                                <animations/>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.9349401240149251" green="1" blue="0.97112728264547499" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="OOy-Ry-VjD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="61" id="AMG-Mn-hfh"/>
+                            <constraint firstItem="OOy-Ry-VjD" firstAttribute="bottom" secondItem="0JE-Nk-F94" secondAttribute="top" constant="-20" id="Lbt-rJ-bfk"/>
+                            <constraint firstItem="OOy-Ry-VjD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WBo-56-Huo"/>
+                            <constraint firstItem="bZa-bu-ZTX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WP6-jZ-NMC"/>
+                            <constraint firstItem="0JE-Nk-F94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ixd-JV-vUv"/>
+                            <constraint firstItem="bZa-bu-ZTX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jhN-kY-SGM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="IRA-VR-68U"/>
+                                <exclude reference="neq-LF-UnN"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="azMetaBall" destination="8bC-Xf-vdC" id="yly-TZ-Zmt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314.5" y="365.5"/>
+            <point key="canvasLocation" x="-206" y="1742"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ODc-y1-Oht">
@@ -69,12 +121,14 @@
                     <navigationBar key="navigationBar" alpha="0.59999999999999998" contentMode="scaleToFill" id="xud-q1-rqg" userLabel="navigation bar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         <color key="barTintColor" red="0.81934626359999996" green="1" blue="0.86676328410000003" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jvM-Yr-ewk">
                         <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="barTintColor" red="0.81934626359999996" green="1" blue="0.86676328410000003" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
@@ -92,6 +146,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fsr-pP-U4Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="oKk-ku-UcB" id="4LM-TC-5cd"/>
@@ -103,7 +158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRX-g7-5aX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-218" y="1103"/>
+            <point key="canvasLocation" x="-206" y="1103"/>
         </scene>
         <!--AZMetaBall-->
         <scene sceneID="aJY-ss-zmm">
@@ -119,6 +174,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cAE-pb-zNk">
                                 <rect key="frame" x="-4" y="0.0" width="320" height="416"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="IAM-Qc-tUk" id="qFB-2k-IsB"/>
@@ -127,12 +183,14 @@
                             </tableView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S06-zz-MwE" customClass="AZMetaBallCanvas">
                                 <rect key="frame" x="-4" y="64" width="320" height="480"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cAE-pb-zNk" firstAttribute="top" secondItem="9UY-jv-VCr" secondAttribute="bottom" constant="-64" id="1YZ-EU-H3d"/>
@@ -150,6 +208,7 @@
                     <connections>
                         <outlet property="azMetaBallView" destination="S06-zz-MwE" id="oKn-WU-bLO"/>
                         <outlet property="listView" destination="cAE-pb-zNk" id="khl-us-1KS"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toDetail" id="tHo-nS-eAY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUl-Dd-0IW" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,7 +16,6 @@
 		47253B2B1C37914700FF911A /* CellDetailText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 47253B2A1C37914700FF911A /* CellDetailText.plist */; };
 		47253B2E1C379B0500FF911A /* AZMetaBallCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */; };
 		47253B311C379B7A00FF911A /* AZMetaBallItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B301C379B7A00FF911A /* AZMetaBallItem.m */; };
-		47253B341C37CFED00FF911A /* AZMetaBallGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B331C37CFED00FF911A /* AZMetaBallGestureRecognizer.m */; };
 		47253B371C37D61600FF911A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B361C37D61600FF911A /* MainViewController.m */; };
 		47253B3B1C38E40400FF911A /* PointUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 47253B3A1C38E40400FF911A /* PointUtils.m */; };
 		47253B421C38FAEF00FF911A /* id_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 47253B3D1C38FAEF00FF911A /* id_1.png */; };
@@ -26,7 +25,7 @@
 		47253B461C38FAEF00FF911A /* id_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 47253B411C38FAEF00FF911A /* id_5.png */; };
 		4751430D1C20517F00E9AB26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751430C1C20517F00E9AB26 /* main.m */; };
 		475143101C20517F00E9AB26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4751430F1C20517F00E9AB26 /* AppDelegate.m */; };
-		475143131C20517F00E9AB26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143121C20517F00E9AB26 /* ViewController.m */; };
+		475143131C20517F00E9AB26 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143121C20517F00E9AB26 /* DetailViewController.m */; };
 		475143161C20517F00E9AB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475143141C20517F00E9AB26 /* Main.storyboard */; };
 		4751431B1C20517F00E9AB26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475143191C20517F00E9AB26 /* LaunchScreen.storyboard */; };
 		475143251C205BA400E9AB26 /* AZMetaBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 475143241C205BA400E9AB26 /* AZMetaBall.m */; };
@@ -49,8 +48,6 @@
 		47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallCanvas.m; path = MetaBall/AZMetaBallCanvas.m; sourceTree = "<group>"; };
 		47253B2F1C379B7A00FF911A /* AZMetaBallItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZMetaBallItem.h; path = MetaBall/AZMetaBallItem.h; sourceTree = "<group>"; };
 		47253B301C379B7A00FF911A /* AZMetaBallItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallItem.m; path = MetaBall/AZMetaBallItem.m; sourceTree = "<group>"; };
-		47253B321C37CFED00FF911A /* AZMetaBallGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AZMetaBallGestureRecognizer.h; path = MetaBall/AZMetaBallGestureRecognizer.h; sourceTree = "<group>"; };
-		47253B331C37CFED00FF911A /* AZMetaBallGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AZMetaBallGestureRecognizer.m; path = MetaBall/AZMetaBallGestureRecognizer.m; sourceTree = "<group>"; };
 		47253B351C37D61600FF911A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ViewController/MainViewController.h; sourceTree = "<group>"; };
 		47253B361C37D61600FF911A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ViewController/MainViewController.m; sourceTree = "<group>"; };
 		47253B391C38E40400FF911A /* PointUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PointUtils.h; path = Utils/PointUtils.h; sourceTree = "<group>"; };
@@ -64,8 +61,8 @@
 		4751430C1C20517F00E9AB26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4751430E1C20517F00E9AB26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4751430F1C20517F00E9AB26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		475143111C20517F00E9AB26 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ViewController/ViewController.h; sourceTree = "<group>"; };
-		475143121C20517F00E9AB26 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ViewController/ViewController.m; sourceTree = "<group>"; };
+		475143111C20517F00E9AB26 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ViewController/DetailViewController.h; sourceTree = "<group>"; };
+		475143121C20517F00E9AB26 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ViewController/DetailViewController.m; sourceTree = "<group>"; };
 		475143151C20517F00E9AB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4751431A1C20517F00E9AB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4751431C1C20517F00E9AB26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,8 +111,8 @@
 			children = (
 				47253B131C36461000FF911A /* MainTableViewController.h */,
 				47253B141C36461000FF911A /* MainTableViewController.m */,
-				475143111C20517F00E9AB26 /* ViewController.h */,
-				475143121C20517F00E9AB26 /* ViewController.m */,
+				475143111C20517F00E9AB26 /* DetailViewController.h */,
+				475143121C20517F00E9AB26 /* DetailViewController.m */,
 				47253B351C37D61600FF911A /* MainViewController.h */,
 				47253B361C37D61600FF911A /* MainViewController.m */,
 			);
@@ -210,8 +207,6 @@
 				47253B2D1C379B0500FF911A /* AZMetaBallCanvas.m */,
 				47253B2F1C379B7A00FF911A /* AZMetaBallItem.h */,
 				47253B301C379B7A00FF911A /* AZMetaBallItem.m */,
-				47253B321C37CFED00FF911A /* AZMetaBallGestureRecognizer.h */,
-				47253B331C37CFED00FF911A /* AZMetaBallGestureRecognizer.m */,
 			);
 			name = MetaBall;
 			sourceTree = "<group>";
@@ -259,6 +254,7 @@
 				TargetAttributes = {
 					475143071C20517F00E9AB26 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7884U55YA7;
 					};
 				};
 			};
@@ -355,10 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				475143251C205BA400E9AB26 /* AZMetaBall.m in Sources */,
-				47253B341C37CFED00FF911A /* AZMetaBallGestureRecognizer.m in Sources */,
 				47253B311C379B7A00FF911A /* AZMetaBallItem.m in Sources */,
 				47253B3B1C38E40400FF911A /* PointUtils.m in Sources */,
-				475143131C20517F00E9AB26 /* ViewController.m in Sources */,
+				475143131C20517F00E9AB26 /* DetailViewController.m in Sources */,
 				47253B2E1C379B0500FF911A /* AZMetaBallCanvas.m in Sources */,
 				47253B151C36461000FF911A /* MainTableViewController.m in Sources */,
 				475143281C2505C100E9AB26 /* Circle.m in Sources */,
@@ -480,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AZMetaBall/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -494,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AZMetaBall/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
