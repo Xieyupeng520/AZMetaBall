@@ -65,6 +65,7 @@
     [self drawTouchCircle:_touchPoint];
     
     [self drawBezierCurveWithCircle1:_centerCircle Circle2:_touchCircle];
+    
 }
 
 #pragma mark  - public方法 -

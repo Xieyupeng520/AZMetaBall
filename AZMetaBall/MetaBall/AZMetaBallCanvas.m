@@ -94,10 +94,11 @@
         case UIGestureRecognizerStateBegan:{
             [self addAzMetaBallItem:touchView];
             _isTouch = true;
-            recognizer.view.hidden = YES;
+//            recognizer.view.hidden = YES; //如果在这就隐藏的话，在手速很慢的情况下，会出现原来的view消失，副本view还未绘制出来的情况
             break;
         }
         case UIGestureRecognizerStateChanged:{
+            recognizer.view.hidden = YES;
             [self resetTouchCenter:_touchPoint];
             break;
         }
@@ -150,6 +151,9 @@
     
     [circle.color set];
     [_path fill];
+    
+//    [[UIColor blackColor] setStroke];
+//    [_path stroke];
     
     [_path removeAllPoints];
 }
